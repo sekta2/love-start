@@ -537,7 +537,7 @@ end
 function lume.time(fn, ...)
   local start = os.clock()
   local rtn = {fn(...)}
-  return os.clock() - start, unpack(rtn)
+  return (os.clock() - start), unpack(rtn)
 end
 
 
@@ -603,7 +603,7 @@ function lume.split(str, sep)
   else
     assert(sep ~= "", "empty separator")
     local psep = patternescape(sep)
-    return lume.array((str .. sep):gmatch("(.-)(" .. psep .. ")"))
+    return lume.array((str..sep):gmatch("(.-)("..psep..")"))
   end
 end
 
@@ -652,7 +652,7 @@ function lume.format(str, vars)
   local f = function(x)
     return tostring(vars[x] or vars[tonumber(x)] or "{" .. x .. "}")
   end
-  return str:gsub("{(.-)}", f)
+  return (str:gsub("{(.-)}", f))
 end
 
 
@@ -674,13 +674,14 @@ function lume.dostring(str)
   return assert((loadstring or load)(str))()
 end
 
+
 function lume.uuid()
   local fn = function(x)
     local r = math.random(16) - 1
     r = (x == "x") and (r + 1) or (r % 4) + 9
     return ("0123456789abcdef"):sub(r, r)
   end
-  return ("xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx"):gsub("[xy]", fn)
+  return (("xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx"):gsub("[xy]", fn))
 end
 
 
@@ -729,7 +730,7 @@ local ripairs_iter = function(t, i)
 end
 
 function lume.ripairs(t)
-  return ripairs_iter, t, #t + 1
+  return ripairs_iter, t, (#t + 1)
 end
 
 
