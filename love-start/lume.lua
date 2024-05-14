@@ -674,7 +674,6 @@ function lume.dostring(str)
   return assert((loadstring or load)(str))()
 end
 
-
 function lume.uuid()
   local fn = function(x)
     local r = math.random(16) - 1
