@@ -44,7 +44,7 @@ function love.update(dt)
     objects.update(dt)
     phys.update(dt)
 
-    local w, h = love.graphics.getDimensions()
+    local w, _ = love.graphics.getDimensions()
 
     if utils.gameTime() >= spawnEnemyTime and enemyCount < 35 then
         spawnEnemyTime = utils.gameTime() + spawnEnemyCooldown

@@ -17,6 +17,16 @@ window.setMode()
 
 ## Functions
 
+### Objects
+
+- `objects.object(base:string(can be nil to use standart base))`
+- `objects.register(obj:table, classname:string)`
+- `objects.create(classname:string)`
+- `objects._remove(uid:number)`
+- `objects.remove(uid:number)`
+- `objects.update(dt:number)`
+- `objects.draw()`
+
 ### Draw
 
 - `draw.setColor(r:number, g:number, b:number, a:number)`
