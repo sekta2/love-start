@@ -1,3 +1,4 @@
+local lg = love.graphics
 local sqrt = math.sqrt
 
 --[[-----------------------------]]--
@@ -23,6 +24,16 @@ return function(lstart)
 
     function utils.gameTime()
         return utils.time
+    end
+
+    function utils.screenScale(mul)
+        local orig = lg.getWidth()
+        return (orig * 0.01) * mul
+    end
+
+    function utils.screenScaleH(mul)
+        local orig = lg.getHeight()
+        return (orig * 0.01) * mul
     end
 
     function utils.update(dt)

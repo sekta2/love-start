@@ -19,13 +19,15 @@ return function(lstart)
     end
 
     function scenes.enter()
-        if not scenes.list[scenes.current] then return end
-        scenes.list[scenes.current]:enter()
+        local scene = scenes.list[scenes.current]
+        if not scene then return end
+        scene:enter()
     end
 
     function scenes.leave()
-        if not scenes.list[scenes.current] then return end
-        scenes.list[scenes.current]:leave()
+        local scene = scenes.list[scenes.current]
+        if not scene then return end
+        scene:leave()
     end
 
     function scenes.update(dt)

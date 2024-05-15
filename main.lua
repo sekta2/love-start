@@ -27,7 +27,7 @@ globalEnemySpawned = 0
 debug = false
 
 function love.load()
-    window.setMode()
+    window.setMode(_, _, true)
 
     phys.createWorld(0, 0, true)
     phys.addCollisionClass("player")
