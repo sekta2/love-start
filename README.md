@@ -5,6 +5,16 @@ A multi-functional template for your Love2D game
 
 I plan to use this template(although it looks like a library) in my projects.
 
+## Usage(components)
+
+To interact with library components you can do this: `lstart.window.setMode()`.
+
+Or like this: 
+```
+window = lstart.window
+window.setMode()
+```
+
 ## Functions
 
 ### Draw
