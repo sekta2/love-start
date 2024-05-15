@@ -22,6 +22,10 @@ globalPlayerPoints = 0
 globalSpeedEnemy = 0
 globalHealthEnemy = 0
 
+globalEnemySpawned = 0
+
+debug = false
+
 function love.load()
     window.setMode()
 
@@ -56,6 +60,12 @@ function love.update(dt)
     end
 end
 
+function love.keypressed(key, scancode)
+    if scancode == "f1" then
+        debug = not debug
+    end
+end
+
 function love.draw()
     objects.draw()
 
@@ -64,4 +74,18 @@ function love.draw()
 
     love.graphics.setColor(1, 0.5, 0)
     love.graphics.print("Points: " .. globalPlayerPoints, 50, 50 + 25)
+
+    if debug then
+        love.graphics.setColor(1, 0.5, 0)
+        love.graphics.print("Spawned: " .. globalEnemySpawned, 50, 50 + 25 + 25)
+
+        love.graphics.setColor(1, 0.5, 0)
+        love.graphics.print("HealthAdditive: " .. globalHealthEnemy, 50, 50 + 25 + 25 + 25)
+
+        love.graphics.setColor(1, 0.5, 0)
+        love.graphics.print("SpeedAdditive: " .. globalSpeedEnemy, 50, 50 + 25 + 25 + 25 + 25)
+    else
+        love.graphics.setColor(1, 1, 1)
+        love.graphics.print("Press F1 to open debug info", 50, 50 + 25 + 25)
+    end
 end

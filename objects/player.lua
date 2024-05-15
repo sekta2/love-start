@@ -31,14 +31,16 @@ function player:update(dt)
     end
 
     if lm.isDown(1) and utils.gameTime() >= self.cooldownShoot then
-        self.cooldownShoot = utils.gameTime() + 0.3
+        self.cooldownShoot = utils.gameTime() + (debug and 0 or 0.3)
 
         local mx, my = lm.getPosition()
         local nx, ny = utils.normalize(mx - x, my - y)
 
-        local bullet = objects.create("bullet")
+        for i = 1, (debug and 2 or 1) do
+            local bullet = objects.create("bullet")
         bullet:setPosition(x + (nx * 25), y + (ny * 25))
         bullet.collider:setLinearVelocity(nx * 350, ny * 350)
+        end
     end
 
     if self.collider:enter("enemy") and utils.gameTime() >= self.cooldownDmg then

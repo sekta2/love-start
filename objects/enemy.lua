@@ -18,6 +18,7 @@ function enemy:initialize()
     enemyCount = enemyCount + 1
     globalSpeedEnemy = globalSpeedEnemy + 0.2
     globalHealthEnemy = globalHealthEnemy + 0.5
+    globalEnemySpawned = globalEnemySpawned + 1
 end
 
 function enemy:update(dt)
@@ -33,6 +34,7 @@ function enemy:update(dt)
 
     if self.health <= 0 then
         self:remove()
+        globalPlayerPoints = globalPlayerPoints + 1
     end
 end
 
