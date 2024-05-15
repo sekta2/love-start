@@ -38,7 +38,7 @@ return function(lstart)
         objects.uid = objects.uid + 1
 
         local obj = objects.registered[classname]:new()
-        obj.uid = object.uid
+        obj.uid = objects.uid
 
         objects.list[objects.uid] = obj
 
@@ -54,13 +54,13 @@ return function(lstart)
     end
 
     function objects.update(dt)
-        for k, v in ipairs(objects.list) do
+        for k, v in pairs(objects.list) do
             if v then v:update(dt) end
         end
     end
 
     function objects.draw()
-        for k, v in ipairs(objects.list) do
+        for k, v in pairs(objects.list) do
             if v then v:draw() end
         end
     end
