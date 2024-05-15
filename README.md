@@ -1,4 +1,4 @@
-  ![banner](https://github.com/sekta2/love-start/assets/47900900/782e7903-7d41-4392-aca9-cdcadb95a014)
+![banner](https://github.com/sekta2/love-start/assets/47900900/d1602d0b-b066-4369-89a8-cc04b9258296)
 
 # love-start
 A multi-functional template for your Love2D game
