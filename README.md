@@ -103,3 +103,16 @@ Component for working with a window.
 - `(number) window.getDesktopHeight()`
 - `(number) window.screenScale(mul:number)`
 - `(number) window.screenScaleH(mul:number)`
+
+## Third-Party libraries
+
+### [windfield](https://github.com/a327ex/windfield)
+- Used for phys component
+### [json.lua](https://github.com/rxi/json.lua)
+- Used for config component
+### [lume](https://github.com/rxi/lume)
+- Just useful features for gamedev
+### [middleclass](https://github.com/kikito/middleclass)
+- Used for object manager
+### [sock.lua](https://github.com/camchenry/sock.lua)
+- Future multiplayer component
