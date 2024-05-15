@@ -15,6 +15,7 @@ lstart.cache = require(PATH .. "cache")(lstart)
 lstart.draw = require(PATH .. "draw")(lstart)
 lstart.phys = require(PATH .. "phys")(lstart)
 lstart.objects = require(PATH .. "objects")(lstart)
+lstart.scenes = require(PATH .. "scenes")(lstart)
 lstart.window = require(PATH .. "window")(lstart)
 
 return setmetatable({}, lstart)

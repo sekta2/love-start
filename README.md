@@ -19,13 +19,13 @@ window.setMode()
 
 ### Objects
 
-- `objects.object(base:string(can be nil to use standart base))`
 - `objects.register(obj:table, classname:string)`
-- `objects.create(classname:string)`
 - `objects._remove(uid:number)`
 - `objects.remove(uid:number)`
 - `objects.update(dt:number)`
 - `objects.draw()`
+- `(table) objects.object(base:string(can be nil to use standart base))`
+- `(table) objects.create(classname:string)`
 
 ### Draw
 
@@ -40,6 +40,15 @@ window.setMode()
 - `phys.draw()`
 - `(table) phys.getWorld()`
 - `(table) phys.createCollider(ctype:string, ...:vararg)`
+
+### Scenes
+
+- `scenes.addScene(name:string, scene:table)`
+- `scenes.setScene(name:string)`
+- `scenes.enter()`
+- `scenes.leave()`
+- `scenes.update(dt:number)`
+- `scenes.draw()`
 
 ### Utils
 
