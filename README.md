@@ -57,7 +57,10 @@ This component is able to create settings for the game, load them and save them 
 Allows you to use the standard 255 color pallete, draw images at the desired resolution, etc.
 
 - `draw.setColor(r:number, g:number, b:number, a:number)`
-- `draw.setImage(img:image)`
+- `draw.setImage(img:table)`
+- `draw.rect(x:number, y:number, w:number, h:number)`
+- `draw.rectOutline(x:number, y:number, w:number, h:number)`
+- `draw.imageRect(x:number, y:number, w:number, h:number)`
 
 ### Phys
 
@@ -81,6 +84,15 @@ Scene Manager (or gamestates).
 - `scenes.update(dt:number)`
 - `scenes.draw()`
 
+### Tilemap
+
+Simple STI wrapper.
+
+- `tilemap.create(...:vararg)`
+- `tilemap.draw()`
+- `tilemap.drawLayer(layer:number)`
+- `(table) tilemap.get()`
+
 ### Utils
 
 Utilities, has useful features.
@@ -92,6 +104,7 @@ Utilities, has useful features.
 - `(number) utils.gameTime()`
 - `(number) utils.screenScale(mul:number)`
 - `(number) utils.screenScaleH(mul:number)`
+- `(number) utils.clamp(val:number, min:number, max:number)`
 
 ### Window
 
@@ -106,6 +119,8 @@ Component for working with a window.
 
 ## Third-Party libraries
 
+### [STI](https://github.com/karai17/Simple-Tiled-Implementation)
+- Used for tilemap component
 ### [windfield](https://github.com/a327ex/windfield)
 - Used for phys component
 ### [json.lua](https://github.com/rxi/json.lua)

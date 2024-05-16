@@ -1,5 +1,7 @@
 local lg = love.graphics
 local sqrt = math.sqrt
+local mmin = math.min
+local mmax = math.max
 
 --[[-----------------------------]]--
 
@@ -34,6 +36,10 @@ return function(lstart)
     function utils.screenScaleH(mul)
         local orig = lg.getHeight()
         return (orig * 0.01) * mul
+    end
+
+    function utils.clamp(val, min, max)
+        return mmin(max, mmax(val, min))
     end
 
     function utils.update(dt)

@@ -23,8 +23,6 @@ function bullet:update(dt)
         if obj then
             self:remove()
             obj.health = obj.health - 65
-
-            globalPlayerPoints = globalPlayerPoints + 1
         end
     end
 end
