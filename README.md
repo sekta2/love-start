@@ -61,6 +61,15 @@ Allows you to use the standard 255 color pallete, draw images at the desired res
 - `draw.rect(x:number, y:number, w:number, h:number)`
 - `draw.rectOutline(x:number, y:number, w:number, h:number)`
 - `draw.imageRect(x:number, y:number, w:number, h:number)`
+- `draw.setFont(font:table or string)`
+- `draw.rect(x:number, y:number, w:number, h:number)`
+- `draw.rectOutline(x:number, y:number, w:number, h:number)`
+- `draw.rectRounded(x:number, y:number, w:number, h:number, rx:number, ry:number)`
+- `draw.rectOutlineRounded(x:number, y:number, w:number, h:number, rx:number, ry:number)`
+- `draw.circle(x:number, y:number, r:number)`
+- `draw.circleOutline(x:number, y:number, rh:number)`
+- `draw.imageRect(x:number, y:number, w:number, h:number)`
+- `draw.text(text:string, font:table or string or nil, x:number, y:number, xalign:number, yalign:number)`
 
 ### Phys
 
